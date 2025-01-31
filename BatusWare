@@ -636,19 +636,4 @@ function lib:Create(text: string, draggable: boolean, openBind)
 	
 	return inLib
 end
-
-local Batus_Hub = lib:Create("Batus Hub", true, "f")
-game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
---Player
-local Player = Batus_Hub:newTab("Player")
-Player:CreateTextbox("Speed", function(v)
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-end)
-Player:CreateTextbox("Jump", function(v)
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-end)
-
-Player:CreateTextbox("Gravity", function(v)
-	workspace.Gravity = v
-end)
 return lib
